@@ -11,6 +11,6 @@ func main(){
 		LogError("Error during configuration")
 		return
 	}
-	http.Handle("/",p.handler)
+	http.HandleFunc("/",p.handler)
 	http.ListenAndServe(":"+string(p.port),nil)
 }
